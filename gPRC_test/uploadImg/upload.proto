@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service Upload {
+    rpc Fileup(ImgRecRequest) returns (Response) {}
+}
+ 
+message ImgRecRequest {  
+    string data = 1;
+    string name = 2;
+    int64 imgID = 3;
+}
+
+message Response{
+    int32 code = 1;
+}
